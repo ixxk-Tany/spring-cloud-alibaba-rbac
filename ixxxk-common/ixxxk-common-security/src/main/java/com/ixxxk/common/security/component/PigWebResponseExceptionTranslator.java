@@ -53,25 +53,25 @@ public class PigWebResponseExceptionTranslator implements WebResponseExceptionTr
 		Throwable[] causeChain = throwableAnalyzer.determineCauseChain(e);
 
 		Exception ase = (AuthenticationException) throwableAnalyzer
-				.getFirstThrowableOfType(AuthenticationException.class, causeChain);
+			.getFirstThrowableOfType(AuthenticationException.class, causeChain);
 		if (ase != null) {
 			return handleOAuth2Exception(new UnauthorizedException(e.getMessage(), e));
 		}
 
 		ase = (AccessDeniedException) throwableAnalyzer.getFirstThrowableOfType(AccessDeniedException.class,
-				causeChain);
+			causeChain);
 		if (ase != null) {
 			return handleOAuth2Exception(new ForbiddenException(ase.getMessage(), ase));
 		}
 
 		ase = (InvalidGrantException) throwableAnalyzer.getFirstThrowableOfType(InvalidGrantException.class,
-				causeChain);
+			causeChain);
 		if (ase != null) {
 			return handleOAuth2Exception(new InvalidException(ase.getMessage(), ase));
 		}
 
 		ase = (HttpRequestMethodNotSupportedException) throwableAnalyzer
-				.getFirstThrowableOfType(HttpRequestMethodNotSupportedException.class, causeChain);
+			.getFirstThrowableOfType(HttpRequestMethodNotSupportedException.class, causeChain);
 		if (ase != null) {
 			return handleOAuth2Exception(new MethodNotAllowed(ase.getMessage(), ase));
 		}
@@ -94,7 +94,7 @@ public class PigWebResponseExceptionTranslator implements WebResponseExceptionTr
 		headers.set(HttpHeaders.PRAGMA, "no-cache");
 		if (status == HttpStatus.UNAUTHORIZED.value() || (e instanceof InsufficientScopeException)) {
 			headers.set(HttpHeaders.WWW_AUTHENTICATE,
-					String.format("%s %s", OAuth2AccessToken.BEARER_TYPE, e.getSummary()));
+				String.format("%s %s", OAuth2AccessToken.BEARER_TYPE, e.getSummary()));
 		}
 
 		// 客户端异常直接返回客户端,不然无法解析
@@ -102,7 +102,7 @@ public class PigWebResponseExceptionTranslator implements WebResponseExceptionTr
 			return new ResponseEntity<>(e, headers, HttpStatus.valueOf(status));
 		}
 		return new ResponseEntity<>(new PigAuth2Exception(e.getMessage(), e.getOAuth2ErrorCode()), headers,
-				HttpStatus.valueOf(status));
+			HttpStatus.valueOf(status));
 
 	}
 

@@ -28,6 +28,7 @@ import cn.hutool.http.HttpUtil;
 import com.ixxxk.common.core.constant.SecurityConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -47,6 +48,7 @@ import java.util.Map;
  */
 @Slf4j
 @Component
+@RefreshScope
 public class PasswordDecoderFilter extends AbstractGatewayFilterFactory {
 
 	private static final String PASSWORD = "password";

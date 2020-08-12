@@ -34,7 +34,6 @@ import com.ixxxk.admin.api.vo.MenuVO;
 import com.ixxxk.admin.api.vo.UserVO;
 import com.ixxxk.admin.mapper.SysUserMapper;
 import com.ixxxk.admin.service.*;
-import com.ixxxk.admin.service.*;
 import com.ixxxk.common.core.constant.CacheConstants;
 import com.ixxxk.common.core.constant.CommonConstants;
 import com.ixxxk.common.core.util.R;
@@ -93,6 +92,12 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 			return userRole;
 		}).collect(Collectors.toList());
 		return sysUserRoleService.saveBatch(userRoleList);
+	}
+
+
+	public static void main(String[] args) {
+		String p = "iG3RJonv4ALPxtH21Wc7Jw==";
+		System.out.println(new BCryptPasswordEncoder().encode(p));
 	}
 
 	/**
