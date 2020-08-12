@@ -21,7 +21,7 @@ package com.ixxxk.codegen.entity;
 import lombok.Data;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2018/8/2 生成配置
  */
 @Data

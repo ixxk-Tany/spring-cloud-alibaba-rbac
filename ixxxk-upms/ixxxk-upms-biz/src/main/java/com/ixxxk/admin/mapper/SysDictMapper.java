@@ -27,7 +27,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 字典表 Mapper 接口
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2017-11-19
  */
 @Mapper

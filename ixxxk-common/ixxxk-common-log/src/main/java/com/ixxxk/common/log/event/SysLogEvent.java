@@ -22,7 +22,7 @@ import com.ixxxk.admin.api.entity.SysLog;
 import org.springframework.context.ApplicationEvent;
 
 /**
- * @author lengleng 系统日志事件
+ * @author CQTany 系统日志事件
  */
 public class SysLogEvent extends ApplicationEvent {
 

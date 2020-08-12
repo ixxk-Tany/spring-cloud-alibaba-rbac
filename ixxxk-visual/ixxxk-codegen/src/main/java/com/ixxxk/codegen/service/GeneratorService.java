@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2018/7/29
  */
 public interface GeneratorService {

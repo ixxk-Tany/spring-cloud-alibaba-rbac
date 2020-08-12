@@ -30,7 +30,7 @@ import java.util.List;
  * 菜单权限表 Mapper 接口
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2019/2/1
  */
 @Mapper

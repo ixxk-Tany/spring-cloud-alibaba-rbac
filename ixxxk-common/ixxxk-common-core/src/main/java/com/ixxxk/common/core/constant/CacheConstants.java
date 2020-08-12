@@ -19,7 +19,7 @@
 package com.ixxxk.common.core.constant;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2020年01月01日
  * <p>
  * 缓存的key 常量

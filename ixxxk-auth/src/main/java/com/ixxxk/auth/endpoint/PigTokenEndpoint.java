@@ -56,7 +56,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 删除token端点
  */
 @Slf4j

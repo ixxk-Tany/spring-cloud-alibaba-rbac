@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2020/7/30
  * <p>
  * 日志类型

@@ -29,7 +29,7 @@ import java.util.List;
  * 部门管理 Mapper 接口
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2019/2/1
  */
 @Mapper

@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1
  */
 @FeignClient(contextId = "remoteUserService", value = ServiceNameConstants.UMPS_SERVICE,

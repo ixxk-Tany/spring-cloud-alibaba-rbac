@@ -35,7 +35,7 @@ import java.time.LocalDateTime;
  * 日志表
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2019/2/1
  */
 @Data

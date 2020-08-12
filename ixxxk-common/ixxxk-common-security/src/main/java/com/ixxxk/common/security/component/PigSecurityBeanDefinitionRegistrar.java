@@ -26,7 +26,7 @@ import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/03/08
  */
 @Slf4j

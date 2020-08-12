@@ -21,7 +21,7 @@ package com.ixxxk.common.log.annotation;
 import java.lang.annotation.*;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 操作日志注解
  */
 @Target(ElementType.METHOD)

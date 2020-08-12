@@ -42,7 +42,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 密码解密工具类
  */
 @Slf4j

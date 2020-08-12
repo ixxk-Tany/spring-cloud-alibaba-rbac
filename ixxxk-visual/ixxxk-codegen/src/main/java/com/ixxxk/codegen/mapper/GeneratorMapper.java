@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * 代码生成器
  *
- * @author lengleng
+ * @author CQTany
  * @date 2018-07-30
  */
 @Mapper

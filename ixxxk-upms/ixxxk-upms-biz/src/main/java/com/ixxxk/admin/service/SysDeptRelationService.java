@@ -27,7 +27,7 @@ import com.ixxxk.admin.api.entity.SysDeptRelation;
  * 服务类
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2019/2/1
  */
 public interface SysDeptRelationService extends IService<SysDeptRelation> {

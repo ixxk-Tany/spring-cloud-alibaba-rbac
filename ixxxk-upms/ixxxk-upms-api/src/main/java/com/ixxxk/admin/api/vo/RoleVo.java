@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2020/2/10
  */
 @Data

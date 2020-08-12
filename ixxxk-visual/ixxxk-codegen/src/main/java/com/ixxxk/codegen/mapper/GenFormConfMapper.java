@@ -25,7 +25,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 生成记录
  *
- * @author lengleng
+ * @author CQTany
  * @date 2019-08-12 15:55:35
  */
 @Mapper

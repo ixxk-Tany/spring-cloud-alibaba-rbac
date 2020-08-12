@@ -34,7 +34,7 @@ import java.util.List;
 import static org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type.SERVLET;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019-06-24
  * <p>
  * 注入自自定义SQL 过滤

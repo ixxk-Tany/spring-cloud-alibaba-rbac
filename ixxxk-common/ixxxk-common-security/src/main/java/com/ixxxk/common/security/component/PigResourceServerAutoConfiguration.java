@@ -34,7 +34,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Collections;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2020-06-23
  */
 @ConfigurationPropertiesScan

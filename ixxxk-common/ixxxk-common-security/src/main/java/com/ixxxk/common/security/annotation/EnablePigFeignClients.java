@@ -23,7 +23,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import java.lang.annotation.*;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1
  */
 @Target(ElementType.TYPE)

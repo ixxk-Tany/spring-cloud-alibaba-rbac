@@ -26,7 +26,7 @@ import com.ixxxk.admin.api.entity.SysOauthClientDetails;
  * 服务类
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2019/2/1
  */
 public interface SysOauthClientDetailsService extends IService<SysOauthClientDetails> {

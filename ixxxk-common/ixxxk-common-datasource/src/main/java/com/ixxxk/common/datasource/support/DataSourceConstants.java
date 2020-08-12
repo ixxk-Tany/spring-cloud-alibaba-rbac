@@ -19,7 +19,7 @@
 package com.ixxxk.common.datasource.support;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019-04-01
  * <p>
  * 数据源相关常量

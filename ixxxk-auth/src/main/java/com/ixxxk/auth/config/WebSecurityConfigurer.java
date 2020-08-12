@@ -33,7 +33,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 认证相关配置
  */
 @Primary

@@ -28,7 +28,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 Spring 工具类
  */
 @Slf4j

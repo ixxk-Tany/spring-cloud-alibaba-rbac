@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 部门树
  */
 @Data

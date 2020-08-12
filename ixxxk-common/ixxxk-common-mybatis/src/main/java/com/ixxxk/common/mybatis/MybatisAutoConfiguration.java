@@ -23,7 +23,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2020-03-14
  * <p>
  * mybatis plus 统一配置

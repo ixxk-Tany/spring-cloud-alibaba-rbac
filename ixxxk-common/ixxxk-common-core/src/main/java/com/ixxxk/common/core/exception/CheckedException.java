@@ -21,7 +21,7 @@ package com.ixxxk.common.core.exception;
 import lombok.NoArgsConstructor;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 😴2018年06月22日16:21:57
  */
 @NoArgsConstructor

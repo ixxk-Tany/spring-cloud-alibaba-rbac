@@ -24,7 +24,7 @@ import org.springframework.security.authentication.event.AuthenticationSuccessEv
 import org.springframework.security.core.Authentication;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 认证成功事件处理器
  */
 public abstract class AbstractAuthenticationSuccessEventHandler

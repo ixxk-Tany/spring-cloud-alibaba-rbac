@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 放行参数配置
  */
 @Data

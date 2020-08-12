@@ -26,7 +26,7 @@ import reactor.core.publisher.Mono;
 import java.util.Objects;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 路由限流配置
  */
 @Configuration

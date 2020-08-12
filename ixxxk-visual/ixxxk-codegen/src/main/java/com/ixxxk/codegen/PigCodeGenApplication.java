@@ -25,7 +25,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2020/03/11 代码生成模块
  */
 @EnableDynamicDataSource

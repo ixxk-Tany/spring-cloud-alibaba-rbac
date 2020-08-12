@@ -39,7 +39,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author lengleng swagger配置
+ * @author CQTany swagger配置
  */
 @EnableSwagger2
 @Configuration(proxyBeanMethods = false)

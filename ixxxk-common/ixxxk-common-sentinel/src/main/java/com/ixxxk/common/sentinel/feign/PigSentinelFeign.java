@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * 支持自动降级注入 重写 {@link com.alibaba.cloud.sentinel.feign.SentinelFeign}
  *
- * @author lengleng
+ * @author CQTany
  * @date 2020/6/9
  */
 public final class PigSentinelFeign {

@@ -40,7 +40,7 @@ import java.util.Map;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2018-07-30
  * <p>
  * 代码生成器

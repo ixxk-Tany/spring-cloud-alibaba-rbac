@@ -30,7 +30,7 @@ import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResour
 import java.util.Collection;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 扩展OAuth2FeignRequestInterceptor
  */
 @Slf4j

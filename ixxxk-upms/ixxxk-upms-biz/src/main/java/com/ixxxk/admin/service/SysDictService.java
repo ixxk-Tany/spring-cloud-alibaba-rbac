@@ -23,7 +23,7 @@ import com.ixxxk.admin.api.entity.SysDict;
 /**
  * 字典表
  *
- * @author lengleng
+ * @author CQTany
  * @date 2019/03/19
  */
 public interface SysDictService extends IService<SysDict> {

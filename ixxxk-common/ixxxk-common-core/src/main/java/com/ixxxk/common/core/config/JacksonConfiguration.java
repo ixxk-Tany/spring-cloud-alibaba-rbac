@@ -36,7 +36,7 @@ import java.util.TimeZone;
 /**
  * JacksonConfig
  *
- * @author lengleng
+ * @author CQTany
  * @author L.cm
  * @author lishangbu
  * @date 2020-06-17

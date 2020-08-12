@@ -32,7 +32,7 @@ import javax.validation.constraints.NotBlank;
  * 客户端信息
  * </p>
  *
- * @author lengleng
+ * @author CQTany
  * @since 2019/2/1
  */
 @Data

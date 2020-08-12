@@ -24,7 +24,7 @@ import lombok.Getter;
 import org.springframework.security.oauth2.common.exceptions.OAuth2Exception;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1 自定义OAuth2Exception
  */
 @JsonSerialize(using = PigAuth2ExceptionSerializer.class)

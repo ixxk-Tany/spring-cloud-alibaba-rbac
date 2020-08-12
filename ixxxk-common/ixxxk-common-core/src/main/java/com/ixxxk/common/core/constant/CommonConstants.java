@@ -19,7 +19,7 @@
 package com.ixxxk.common.core.constant;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1
  */
 public interface CommonConstants {

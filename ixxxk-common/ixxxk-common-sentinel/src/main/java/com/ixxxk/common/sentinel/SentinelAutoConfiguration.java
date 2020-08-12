@@ -34,7 +34,7 @@ import org.springframework.context.annotation.Scope;
 /**
  * sentinel 配置
  *
- * @author lengleng
+ * @author CQTany
  * @date 2020-02-12
  */
 @Configuration(proxyBeanMethods = false)

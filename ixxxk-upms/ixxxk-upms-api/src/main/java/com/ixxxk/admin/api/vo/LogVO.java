@@ -24,7 +24,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2019/2/1
  */
 @Data

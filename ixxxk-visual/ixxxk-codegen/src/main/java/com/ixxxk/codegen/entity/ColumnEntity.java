@@ -21,7 +21,7 @@ package com.ixxxk.codegen.entity;
 import lombok.Data;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2018/07/29 列属性： https://blog.csdn.net/lkforce/article/details/79557482
  */
 @Data

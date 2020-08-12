@@ -22,7 +22,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2018/8/15 社交登录类型
  */
 @Getter

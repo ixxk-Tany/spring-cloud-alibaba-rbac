@@ -31,7 +31,7 @@ import reactor.core.publisher.Mono;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
 /**
- * @author lengleng
+ * @author CQTany
  * @date 2018-07-19 SwaggerResourceHandler
  */
 @Slf4j
