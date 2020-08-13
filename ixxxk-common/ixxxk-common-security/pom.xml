@@ -29,7 +29,7 @@
 	<artifactId>ixxxk-common-security</artifactId>
 	<packaging>jar</packaging>
 
-	<description>pig 安全工具类</description>
+	<description>ixxxk 安全工具类</description>
 
 
 	<dependencies>
