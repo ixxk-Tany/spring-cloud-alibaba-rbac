@@ -18,8 +18,8 @@
 
 package com.ixxxk.common.security.annotation;
 
-import com.ixxxk.common.security.component.PigResourceServerAutoConfiguration;
-import com.ixxxk.common.security.component.PigSecurityBeanDefinitionRegistrar;
+import com.ixxxk.common.security.component.ResourceServerAutoConfiguration;
+import com.ixxxk.common.security.component.SecurityBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -38,7 +38,7 @@ import java.lang.annotation.*;
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@Import({ PigResourceServerAutoConfiguration.class, PigSecurityBeanDefinitionRegistrar.class })
+@Import({ResourceServerAutoConfiguration.class, SecurityBeanDefinitionRegistrar.class})
 public @interface EnablePigResourceServer {
 
 }

@@ -20,7 +20,7 @@ package com.ixxxk.common.security.util;
 
 import cn.hutool.core.util.StrUtil;
 import com.ixxxk.common.core.constant.SecurityConstants;
-import com.ixxxk.common.security.service.PigUser;
+import com.ixxxk.common.security.service.IxxxkUser;
 import lombok.experimental.UtilityClass;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * 安全工具类
  *
- * @author L.cm
+ * @author CQTany
  */
 @UtilityClass
 public class SecurityUtils {
@@ -48,10 +48,10 @@ public class SecurityUtils {
 	/**
 	 * 获取用户
 	 */
-	public PigUser getUser(Authentication authentication) {
+	public IxxxkUser getUser(Authentication authentication) {
 		Object principal = authentication.getPrincipal();
-		if (principal instanceof PigUser) {
-			return (PigUser) principal;
+		if (principal instanceof IxxxkUser) {
+			return (IxxxkUser) principal;
 		}
 		return null;
 	}
@@ -59,7 +59,7 @@ public class SecurityUtils {
 	/**
 	 * 获取用户
 	 */
-	public PigUser getUser() {
+	public IxxxkUser getUser() {
 		Authentication authentication = getAuthentication();
 		if (authentication == null) {
 			return null;

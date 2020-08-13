@@ -16,26 +16,31 @@
  *
  */
 
-package com.ixxxk.codegen;
+package com.ixxxk.auth.handler;
 
-import com.ixxxk.common.datasource.annotation.EnableDynamicDataSource;
-import com.ixxxk.common.security.annotation.EnablePigFeignClients;
-import com.ixxxk.common.security.annotation.EnablePigResourceServer;
-import org.springframework.boot.SpringApplication;
-import org.springframework.cloud.client.SpringCloudApplication;
+import com.ixxxk.common.security.handler.AbstractAuthenticationSuccessEventHandler;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
 
 /**
  * @author CQTany
- * @date 2020/03/11 代码生成模块
+ * @date 2019/2/1
  */
-@EnableDynamicDataSource
-@EnablePigFeignClients
-@SpringCloudApplication
-@EnablePigResourceServer
-public class PigCodeGenApplication {
+@Slf4j
+@Component
+public class AuthenticationSuccessEventHandler extends AbstractAuthenticationSuccessEventHandler {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PigCodeGenApplication.class, args);
+	/**
+	 * 处理登录成功方法
+	 * <p>
+	 * 获取到登录的authentication 对象
+	 *
+	 * @param authentication 登录对象
+	 */
+	@Override
+	public void handle(Authentication authentication) {
+		log.info("用户：{} 登录成功", authentication.getPrincipal());
 	}
 
 }

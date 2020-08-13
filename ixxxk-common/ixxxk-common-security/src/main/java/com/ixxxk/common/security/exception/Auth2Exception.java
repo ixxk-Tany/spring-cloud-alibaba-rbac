@@ -19,7 +19,7 @@
 package com.ixxxk.common.security.exception;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.ixxxk.common.security.component.PigAuth2ExceptionSerializer;
+import com.ixxxk.common.security.component.Auth2ExceptionSerializer;
 import lombok.Getter;
 import org.springframework.security.oauth2.common.exceptions.OAuth2Exception;
 
@@ -27,17 +27,18 @@ import org.springframework.security.oauth2.common.exceptions.OAuth2Exception;
  * @author CQTany
  * @date 2019/2/1 自定义OAuth2Exception
  */
-@JsonSerialize(using = PigAuth2ExceptionSerializer.class)
-public class PigAuth2Exception extends OAuth2Exception {
+@JsonSerialize(using = Auth2ExceptionSerializer.class)
+public class Auth2Exception extends OAuth2Exception {
 
+	private static final long serialVersionUID = -8068866165505691338L;
 	@Getter
 	private String errorCode;
 
-	public PigAuth2Exception(String msg) {
+	public Auth2Exception(String msg) {
 		super(msg);
 	}
 
-	public PigAuth2Exception(String msg, String errorCode) {
+	public Auth2Exception(String msg, String errorCode) {
 		super(msg);
 		this.errorCode = errorCode;
 	}

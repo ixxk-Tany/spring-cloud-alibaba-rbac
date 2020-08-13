@@ -20,9 +20,9 @@ package com.ixxxk.auth.config;
 
 import com.ixxxk.common.core.constant.CacheConstants;
 import com.ixxxk.common.core.constant.SecurityConstants;
-import com.ixxxk.common.security.component.PigWebResponseExceptionTranslator;
-import com.ixxxk.common.security.service.PigClientDetailsService;
-import com.ixxxk.common.security.service.PigUser;
+import com.ixxxk.common.security.component.WebResponseExceptionTranslator;
+import com.ixxxk.common.security.service.IxxxkClientDetailsService;
+import com.ixxxk.common.security.service.IxxxkUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -63,7 +63,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		PigClientDetailsService clientDetailsService = new PigClientDetailsService(dataSource);
+		IxxxkClientDetailsService clientDetailsService = new IxxxkClientDetailsService(dataSource);
 		clientDetailsService.setSelectClientDetailsSql(SecurityConstants.DEFAULT_SELECT_STATEMENT);
 		clientDetailsService.setFindClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT);
 		clients.withClientDetails(clientDetailsService);
@@ -77,10 +77,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
 		endpoints.allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST).tokenStore(tokenStore())
-				.tokenEnhancer(tokenEnhancer()).userDetailsService(userDetailsService)
-				.authenticationManager(authenticationManager).reuseRefreshTokens(false)
-				.pathMapping("/oauth/confirm_access", "/token/confirm_access")
-				.exceptionTranslator(new PigWebResponseExceptionTranslator());
+			.tokenEnhancer(tokenEnhancer()).userDetailsService(userDetailsService)
+			.authenticationManager(authenticationManager).reuseRefreshTokens(false)
+			.pathMapping("/oauth/confirm_access", "/token/confirm_access")
+			.exceptionTranslator(new WebResponseExceptionTranslator());
 	}
 
 	@Bean
@@ -94,11 +94,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	public TokenEnhancer tokenEnhancer() {
 		return (accessToken, authentication) -> {
 			final Map<String, Object> additionalInfo = new HashMap<>(4);
-			PigUser pigUser = (PigUser) authentication.getUserAuthentication().getPrincipal();
+			IxxxkUser ixxxkUser = (IxxxkUser) authentication.getUserAuthentication().getPrincipal();
 			additionalInfo.put(SecurityConstants.DETAILS_LICENSE, SecurityConstants.PROJECT_LICENSE);
-			additionalInfo.put(SecurityConstants.DETAILS_USER_ID, pigUser.getId());
-			additionalInfo.put(SecurityConstants.DETAILS_USERNAME, pigUser.getUsername());
-			additionalInfo.put(SecurityConstants.DETAILS_DEPT_ID, pigUser.getDeptId());
+			additionalInfo.put(SecurityConstants.DETAILS_USER_ID, ixxxkUser.getId());
+			additionalInfo.put(SecurityConstants.DETAILS_USERNAME, ixxxkUser.getUsername());
+			additionalInfo.put(SecurityConstants.DETAILS_DEPT_ID, ixxxkUser.getDeptId());
 			((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInfo);
 			return accessToken;
 		};

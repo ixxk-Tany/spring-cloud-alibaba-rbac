@@ -45,14 +45,15 @@ import java.io.PrintWriter;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class PigAccessDeniedHandler extends OAuth2AccessDeniedHandler {
+public class AccessDeniedHandler extends OAuth2AccessDeniedHandler {
 
 	private final ObjectMapper objectMapper;
 
 	/**
 	 * 授权拒绝处理，使用R包装
-	 * @param request request
-	 * @param response response
+	 *
+	 * @param request       request
+	 * @param response      response
 	 * @param authException authException
 	 */
 	@Override

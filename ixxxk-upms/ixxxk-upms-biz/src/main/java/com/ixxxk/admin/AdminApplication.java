@@ -16,22 +16,24 @@
  *
  */
 
-package com.ixxxk.monitor;
+package com.ixxxk.admin;
 
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
+import com.ixxxk.common.security.annotation.EnablePigFeignClients;
+import com.ixxxk.common.security.annotation.EnablePigResourceServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
  * @author CQTany
- * @date 2018年06月21日 监控中心
+ * @date 2018年06月21日 用户统一管理系统
  */
-@EnableAdminServer
+@EnablePigResourceServer
+@EnablePigFeignClients
 @SpringCloudApplication
-public class PigMonitorApplication {
+public class AdminApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigMonitorApplication.class, args);
+		SpringApplication.run(AdminApplication.class, args);
 	}
 
 }

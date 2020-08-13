@@ -19,12 +19,11 @@
 package com.ixxxk.common.security.component;
 
 import com.ixxxk.common.core.constant.SecurityConstants;
-import com.ixxxk.common.security.service.PigUser;
+import com.ixxxk.common.security.service.IxxxkUser;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.oauth2.provider.token.UserAuthenticationConverter;
 import org.springframework.util.StringUtils;
 
 import java.util.Collection;
@@ -37,13 +36,14 @@ import java.util.Map;
  * <p>
  * 根据checktoken 的结果转化用户信息
  */
-public class PigUserAuthenticationConverter implements UserAuthenticationConverter {
+public class UserAuthenticationConverter implements org.springframework.security.oauth2.provider.token.UserAuthenticationConverter {
 
 	private static final String N_A = "N/A";
 
 	/**
 	 * Extract information about the user to be used in an access token (i.e. for resource
 	 * servers).
+	 *
 	 * @param authentication an authentication representing a user
 	 * @return a map of key values representing the unique information about the user
 	 */
@@ -71,7 +71,7 @@ public class PigUserAuthenticationConverter implements UserAuthenticationConvert
 			String username = (String) map.get(SecurityConstants.DETAILS_USERNAME);
 			Integer id = (Integer) map.get(SecurityConstants.DETAILS_USER_ID);
 			Integer deptId = (Integer) map.get(SecurityConstants.DETAILS_DEPT_ID);
-			PigUser user = new PigUser(id, deptId, username, N_A, true, true, true, true, authorities);
+			IxxxkUser user = new IxxxkUser(id, deptId, username, N_A, true, true, true, true, authorities);
 			return new UsernamePasswordAuthenticationToken(user, N_A, authorities);
 		}
 		return null;

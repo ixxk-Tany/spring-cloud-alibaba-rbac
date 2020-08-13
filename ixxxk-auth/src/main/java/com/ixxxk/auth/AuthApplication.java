@@ -28,10 +28,10 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @SpringCloudApplication
 @EnablePigFeignClients
-public class PigAuthApplication {
+public class AuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigAuthApplication.class, args);
+		SpringApplication.run(AuthApplication.class, args);
 	}
 
 }

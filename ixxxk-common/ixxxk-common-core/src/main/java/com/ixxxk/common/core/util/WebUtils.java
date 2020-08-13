@@ -43,7 +43,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * Miscellaneous utilities for web applications.
  *
- * @author L.cm
+ * @author CQTany
  */
 @Slf4j
 @UtilityClass

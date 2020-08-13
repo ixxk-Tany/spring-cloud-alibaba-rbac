@@ -35,7 +35,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Component
 @RequiredArgsConstructor
-public class PigBearerTokenExtractor extends BearerTokenExtractor {
+public class IxxxkBearerTokenExtractor extends BearerTokenExtractor {
 
 	private final PathMatcher pathMatcher = new AntPathMatcher();
 
@@ -44,7 +44,7 @@ public class PigBearerTokenExtractor extends BearerTokenExtractor {
 	@Override
 	public Authentication extract(HttpServletRequest request) {
 		boolean match = urlProperties.getUrls().stream()
-				.anyMatch(url -> pathMatcher.match(url, request.getRequestURI()));
+			.anyMatch(url -> pathMatcher.match(url, request.getRequestURI()));
 
 		return match ? null : super.extract(request);
 	}

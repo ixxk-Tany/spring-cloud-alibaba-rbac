@@ -32,14 +32,15 @@ import javax.sql.DataSource;
  * <p>
  * see JdbcClientDetailsService
  */
-public class PigClientDetailsService extends JdbcClientDetailsService {
+public class IxxxkClientDetailsService extends JdbcClientDetailsService {
 
-	public PigClientDetailsService(DataSource dataSource) {
+	public IxxxkClientDetailsService(DataSource dataSource) {
 		super(dataSource);
 	}
 
 	/**
 	 * 重写原生方法支持redis缓存
+	 *
 	 * @param clientId
 	 * @return
 	 */

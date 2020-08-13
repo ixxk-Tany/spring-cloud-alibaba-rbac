@@ -18,9 +18,10 @@
 
 package com.ixxxk.auth.handler;
 
-import com.ixxxk.common.security.handler.AbstractAuthenticationSuccessEventHandler;
+import com.ixxxk.common.security.handler.AbstractAuthenticationFailureEvenHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Component;
 
 /**
@@ -29,17 +30,18 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class PigAuthenticationSuccessEventHandler extends AbstractAuthenticationSuccessEventHandler {
+public class AuthenticationFailureEvenHandler extends AbstractAuthenticationFailureEvenHandler {
 
 	/**
-	 * 处理登录成功方法
+	 * 处理登录失败方法
 	 * <p>
-	 * 获取到登录的authentication 对象
-	 * @param authentication 登录对象
+	 *
+	 * @param authenticationException 登录的authentication 对象
+	 * @param authentication          登录的authenticationException 对象
 	 */
 	@Override
-	public void handle(Authentication authentication) {
-		log.info("用户：{} 登录成功", authentication.getPrincipal());
+	public void handle(AuthenticationException authenticationException, Authentication authentication) {
+		log.info("用户：{} 登录失败，异常：{}", authentication.getPrincipal(), authenticationException.getLocalizedMessage());
 	}
 
 }

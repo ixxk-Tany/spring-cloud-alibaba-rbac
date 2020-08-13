@@ -52,7 +52,7 @@ import java.util.Set;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class PigUserDetailsServiceImpl implements UserDetailsService {
+public class IxxxkUserDetailsServiceImpl implements UserDetailsService {
 
 	private final RemoteUserService remoteUserService;
 
@@ -60,6 +60,7 @@ public class PigUserDetailsServiceImpl implements UserDetailsService {
 
 	/**
 	 * 用户密码登录
+	 *
 	 * @param username 用户名
 	 * @return
 	 */
@@ -68,7 +69,7 @@ public class PigUserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) {
 		Cache cache = cacheManager.getCache(CacheConstants.USER_DETAILS);
 		if (cache != null && cache.get(username) != null) {
-			return (PigUser) cache.get(username).get();
+			return (IxxxkUser) cache.get(username).get();
 		}
 
 		R<UserInfo> result = remoteUserService.info(username, SecurityConstants.FROM_IN);
@@ -99,13 +100,13 @@ public class PigUserDetailsServiceImpl implements UserDetailsService {
 
 		}
 		Collection<? extends GrantedAuthority> authorities = AuthorityUtils
-				.createAuthorityList(dbAuthsSet.toArray(new String[0]));
+			.createAuthorityList(dbAuthsSet.toArray(new String[0]));
 		SysUser user = info.getSysUser();
 
 		// 构造security用户
-		return new PigUser(user.getUserId(), user.getDeptId(), user.getUsername(),
-				SecurityConstants.BCRYPT + user.getPassword(),
-				StrUtil.equals(user.getLockFlag(), CommonConstants.STATUS_NORMAL), true, true, true, authorities);
+		return new IxxxkUser(user.getUserId(), user.getDeptId(), user.getUsername(),
+			SecurityConstants.BCRYPT + user.getPassword(),
+			StrUtil.equals(user.getLockFlag(), CommonConstants.STATUS_NORMAL), true, true, true, authorities);
 	}
 
 }

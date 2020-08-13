@@ -35,7 +35,7 @@ import java.util.Objects;
 /**
  * 系统日志工具类
  *
- * @author L.cm
+ * @author CQTany
  */
 @UtilityClass
 public class SysLogUtils {

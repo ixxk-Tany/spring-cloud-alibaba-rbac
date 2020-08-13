@@ -35,13 +35,15 @@ import java.time.format.DateTimeFormatter;
 /**
  * java 8 时间默认序列化
  *
- * @author L.cm
+ * @author CQTany
  * @author lishanbu
  */
 
 public class PigJavaTimeModule extends SimpleModule {
 
-	public PigJavaTimeModule() {
+    private static final long serialVersionUID = 2350975093405002485L;
+
+    public PigJavaTimeModule() {
 		super(PackageVersion.VERSION);
 		this.addSerializer(LocalDateTime.class,
 				new LocalDateTimeSerializer(DateTimeFormatter.ofPattern(DatePattern.NORM_DATETIME_PATTERN)));

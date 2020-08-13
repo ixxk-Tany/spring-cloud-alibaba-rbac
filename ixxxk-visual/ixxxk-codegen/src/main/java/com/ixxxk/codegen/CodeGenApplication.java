@@ -16,8 +16,9 @@
  *
  */
 
-package com.ixxxk.admin;
+package com.ixxxk.codegen;
 
+import com.ixxxk.common.datasource.annotation.EnableDynamicDataSource;
 import com.ixxxk.common.security.annotation.EnablePigFeignClients;
 import com.ixxxk.common.security.annotation.EnablePigResourceServer;
 import org.springframework.boot.SpringApplication;
@@ -25,15 +26,16 @@ import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
  * @author CQTany
- * @date 2018年06月21日 用户统一管理系统
+ * @date 2020/03/11 代码生成模块
  */
-@EnablePigResourceServer
+@EnableDynamicDataSource
 @EnablePigFeignClients
 @SpringCloudApplication
-public class PigAdminApplication {
+@EnablePigResourceServer
+public class CodeGenApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigAdminApplication.class, args);
+		SpringApplication.run(CodeGenApplication.class, args);
 	}
 
 }

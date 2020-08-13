@@ -45,13 +45,14 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.a
  * 支持swagger添加X-Forwarded-Prefix header （F SR2 已经支持，不需要自己维护）
  */
 @Component
-public class PigRequestGlobalFilter implements GlobalFilter, Ordered {
+public class RequestGlobalFilter implements GlobalFilter, Ordered {
 
 	/**
 	 * Process the Web request and (optionally) delegate to the next {@code WebFilter}
 	 * through the given {@link GatewayFilterChain}.
+	 *
 	 * @param exchange the current server exchange
-	 * @param chain provides a way to delegate to the next filter
+	 * @param chain    provides a way to delegate to the next filter
 	 * @return {@code Mono<Void>} to indicate when request processing is complete
 	 */
 	@Override

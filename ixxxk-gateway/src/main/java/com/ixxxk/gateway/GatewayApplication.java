@@ -16,32 +16,22 @@
  *
  */
 
-package com.ixxxk.common.security.exception;
+package com.ixxxk.gateway;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.ixxxk.common.security.component.Auth2ExceptionSerializer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
  * @author CQTany
- * @date 2019/2/1
+ * @date 2018年06月21日
+ * <p>
+ * 网关应用
  */
-@JsonSerialize(using = Auth2ExceptionSerializer.class)
-public class InvalidException extends Auth2Exception {
+@SpringCloudApplication
+public class GatewayApplication {
 
-	private static final long serialVersionUID = -6081967244842877475L;
-
-	public InvalidException(String msg, Throwable t) {
-		super(msg);
-	}
-
-	@Override
-	public String getOAuth2ErrorCode() {
-		return "invalid_exception";
-	}
-
-	@Override
-	public int getHttpErrorCode() {
-		return 426;
+	public static void main(String[] args) {
+		SpringApplication.run(GatewayApplication.class, args);
 	}
 
 }

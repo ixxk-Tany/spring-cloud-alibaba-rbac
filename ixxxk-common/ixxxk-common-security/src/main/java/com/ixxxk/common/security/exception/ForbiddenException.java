@@ -19,15 +19,17 @@
 package com.ixxxk.common.security.exception;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.ixxxk.common.security.component.PigAuth2ExceptionSerializer;
+import com.ixxxk.common.security.component.Auth2ExceptionSerializer;
 import org.springframework.http.HttpStatus;
 
 /**
  * @author CQTany
  * @date 2019/2/1
  */
-@JsonSerialize(using = PigAuth2ExceptionSerializer.class)
-public class ForbiddenException extends PigAuth2Exception {
+@JsonSerialize(using = Auth2ExceptionSerializer.class)
+public class ForbiddenException extends Auth2Exception {
+
+	private static final long serialVersionUID = 6238547920108925996L;
 
 	public ForbiddenException(String msg, Throwable t) {
 		super(msg);

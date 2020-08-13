@@ -39,7 +39,7 @@ import java.util.Collections;
  */
 @ConfigurationPropertiesScan
 @ComponentScan("com.ixxxk.common.security")
-public class PigResourceServerAutoConfiguration {
+public class ResourceServerAutoConfiguration {
 
 	@Bean
 	@Primary

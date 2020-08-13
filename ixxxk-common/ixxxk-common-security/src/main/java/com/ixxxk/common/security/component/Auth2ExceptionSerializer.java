@@ -22,7 +22,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.ixxxk.common.core.constant.CommonConstants;
-import com.ixxxk.common.security.exception.PigAuth2Exception;
+import com.ixxxk.common.security.exception.Auth2Exception;
 import lombok.SneakyThrows;
 
 /**
@@ -31,15 +31,17 @@ import lombok.SneakyThrows;
  * <p>
  * OAuth2 异常格式化
  */
-public class PigAuth2ExceptionSerializer extends StdSerializer<PigAuth2Exception> {
+public class Auth2ExceptionSerializer extends StdSerializer<Auth2Exception> {
 
-	public PigAuth2ExceptionSerializer() {
-		super(PigAuth2Exception.class);
+	private static final long serialVersionUID = -7614152343382290505L;
+
+	public Auth2ExceptionSerializer() {
+		super(Auth2Exception.class);
 	}
 
 	@Override
 	@SneakyThrows
-	public void serialize(PigAuth2Exception value, JsonGenerator gen, SerializerProvider provider) {
+	public void serialize(Auth2Exception value, JsonGenerator gen, SerializerProvider provider) {
 		gen.writeStartObject();
 		gen.writeObjectField("code", CommonConstants.FAIL);
 		gen.writeStringField("msg", value.getMessage());

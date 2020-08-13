@@ -34,7 +34,7 @@ import java.util.Collection;
  * @date 2019/2/1 扩展OAuth2FeignRequestInterceptor
  */
 @Slf4j
-public class PigFeignClientInterceptor extends OAuth2FeignRequestInterceptor {
+public class FeignClientInterceptor extends OAuth2FeignRequestInterceptor {
 
 	private final OAuth2ClientContext oAuth2ClientContext;
 
@@ -43,12 +43,13 @@ public class PigFeignClientInterceptor extends OAuth2FeignRequestInterceptor {
 	/**
 	 * Default constructor which uses the provided OAuth2ClientContext and Bearer tokens
 	 * within Authorization header
-	 * @param oAuth2ClientContext provided context
-	 * @param resource type of resource to be accessed
+	 *
+	 * @param oAuth2ClientContext     provided context
+	 * @param resource                type of resource to be accessed
 	 * @param accessTokenContextRelay
 	 */
-	public PigFeignClientInterceptor(OAuth2ClientContext oAuth2ClientContext, OAuth2ProtectedResourceDetails resource,
-			AccessTokenContextRelay accessTokenContextRelay) {
+	public FeignClientInterceptor(OAuth2ClientContext oAuth2ClientContext, OAuth2ProtectedResourceDetails resource,
+								  AccessTokenContextRelay accessTokenContextRelay) {
 		super(oAuth2ClientContext, resource);
 		this.oAuth2ClientContext = oAuth2ClientContext;
 		this.accessTokenContextRelay = accessTokenContextRelay;
