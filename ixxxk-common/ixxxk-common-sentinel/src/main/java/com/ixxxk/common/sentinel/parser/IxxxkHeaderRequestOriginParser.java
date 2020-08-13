@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author CQTany
  * @date 2020-06-11
  */
-public class PigHeaderRequestOriginParser implements RequestOriginParser {
+public class IxxxkHeaderRequestOriginParser implements RequestOriginParser {
 
 	/**
 	 * 请求头获取allow

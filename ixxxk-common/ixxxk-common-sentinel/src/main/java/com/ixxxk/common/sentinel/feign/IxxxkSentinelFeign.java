@@ -24,14 +24,14 @@ import java.util.Map;
  * @author CQTany
  * @date 2020/6/9
  */
-public final class PigSentinelFeign {
+public final class IxxxkSentinelFeign {
 
-	private PigSentinelFeign() {
+	private IxxxkSentinelFeign() {
 
 	}
 
-	public static PigSentinelFeign.Builder builder() {
-		return new PigSentinelFeign.Builder();
+	public static IxxxkSentinelFeign.Builder builder() {
+		return new IxxxkSentinelFeign.Builder();
 	}
 
 	public static final class Builder extends Feign.Builder implements ApplicationContextAware {
@@ -48,7 +48,7 @@ public final class PigSentinelFeign {
 		}
 
 		@Override
-		public PigSentinelFeign.Builder contract(Contract contract) {
+		public IxxxkSentinelFeign.Builder contract(Contract contract) {
 			this.contract = contract;
 			return this;
 		}
@@ -61,8 +61,8 @@ public final class PigSentinelFeign {
 					// using reflect get fallback and fallbackFactory properties from
 					// FeignClientFactoryBean because FeignClientFactoryBean is a package
 					// level class, we can not use it in our package
-					Object feignClientFactoryBean = PigSentinelFeign.Builder.this.applicationContext
-							.getBean("&" + target.type().getName());
+					Object feignClientFactoryBean = IxxxkSentinelFeign.Builder.this.applicationContext
+						.getBean("&" + target.type().getName());
 
 					Class fallback = (Class) getFieldValue(feignClientFactoryBean, "fallback");
 					Class fallbackFactory = (Class) getFieldValue(feignClientFactoryBean, "fallbackFactory");
@@ -76,15 +76,15 @@ public final class PigSentinelFeign {
 					// check fallback and fallbackFactory properties
 					if (void.class != fallback) {
 						fallbackInstance = getFromContext(beanName, "fallback", fallback, target.type());
-						return new PigSentinelInvocationHandler(target, dispatch,
-								new FallbackFactory.Default(fallbackInstance));
+						return new IxxxkSentinelInvocationHandler(target, dispatch,
+							new FallbackFactory.Default(fallbackInstance));
 					}
 					if (void.class != fallbackFactory) {
 						fallbackFactoryInstance = (FallbackFactory) getFromContext(beanName, "fallbackFactory",
-								fallbackFactory, FallbackFactory.class);
-						return new PigSentinelInvocationHandler(target, dispatch, fallbackFactoryInstance);
+							fallbackFactory, FallbackFactory.class);
+						return new IxxxkSentinelInvocationHandler(target, dispatch, fallbackFactoryInstance);
 					}
-					return new PigSentinelInvocationHandler(target, dispatch);
+					return new IxxxkSentinelInvocationHandler(target, dispatch);
 				}
 
 				private Object getFromContext(String name, String type, Class fallbackType, Class targetType) {

@@ -19,7 +19,7 @@
 package com.ixxxk.common.core.config;
 
 import cn.hutool.core.date.DatePattern;
-import com.ixxxk.common.core.jackson.PigJavaTimeModule;
+import com.ixxxk.common.core.jackson.IxxxkJavaTimeModule;
 import com.ixxxk.common.core.mybatis.SqlFilterArgumentResolver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Configuration;
@@ -49,12 +49,13 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 	}
 
 	/**
-	 * 增加GET请求参数中时间类型转换 {@link PigJavaTimeModule}
+	 * 增加GET请求参数中时间类型转换 {@link IxxxkJavaTimeModule}
 	 * <ul>
 	 * <li>HH:mm:ss -> LocalTime</li>
 	 * <li>yyyy-MM-dd -> LocalDate</li>
 	 * <li>yyyy-MM-dd HH:mm:ss -> LocalDateTime</li>
 	 * </ul>
+	 *
 	 * @param registry
 	 */
 	@Override

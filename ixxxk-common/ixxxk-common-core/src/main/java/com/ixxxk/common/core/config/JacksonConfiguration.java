@@ -20,7 +20,7 @@ package com.ixxxk.common.core.config;
 
 import cn.hutool.core.date.DatePattern;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ixxxk.common.core.jackson.PigJavaTimeModule;
+import com.ixxxk.common.core.jackson.IxxxkJavaTimeModule;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -53,7 +53,7 @@ public class JacksonConfiguration {
 			builder.locale(Locale.CHINA);
 			builder.timeZone(TimeZone.getTimeZone(ZoneId.systemDefault()));
 			builder.simpleDateFormat(DatePattern.NORM_DATETIME_PATTERN);
-			builder.modules(new PigJavaTimeModule());
+			builder.modules(new IxxxkJavaTimeModule());
 		};
 	}
 
